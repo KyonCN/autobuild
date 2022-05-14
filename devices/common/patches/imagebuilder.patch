@@ -82,7 +82,7 @@
  
  ifndef IB
    ifdef CONFIG_TARGET_PER_DEVICE_ROOTFS
-@@ -292,11 +293,34 @@ define Image/gzip-ext4-padded-squashfs
+@@ -292,11 +293,36 @@ define Image/gzip-ext4-padded-squashfs
  
  endef
  
@@ -101,6 +101,8 @@
 +	BIN_DIR="$(BIN_DIR)" \
 +	SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH) \
 +	IMAGE_NAME="$(ROOTFSTZ)" \
++	FILE_NAME="$(DEVICE_IMG_NAME)" \
++	FILE_DIR="$(KDIR)/tmp" \
 +	IMAGE_TYPE="rootfs" \
 +	IMAGE_FILESYSTEM="rootfs" \
 +	IMAGE_PREFIX="$(IMG_PREFIX)" \
